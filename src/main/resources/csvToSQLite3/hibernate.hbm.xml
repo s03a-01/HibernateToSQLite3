@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="csvToSQLite3.PojoUntil2005" table="kabu_until_2005" dynamic-insert="false" dynamic-update="false" mutable="true" optimistic-lock="version" polymorphism="implicit" select-before-update="false" >
+    
+    <id column="id" name="id" type="java.lang.Long">
+      <generator class="native"/>
+    </id>
+    <property name="marketDate" type="date"/>
+    <property name="code" type="integer"/>
+    <property name="name" type="string" length="30" />
+    <property name="marketOpen" type="float"/>
+    <property name="high" type="float"/>
+    <property name="low" type="float"/>
+    <property name="marketClose" type="float"/>
+    <property name="volume" type="java.lang.Long"/>
+    <property name="market" type="integer"/>
+  </class>
+</hibernate-mapping>

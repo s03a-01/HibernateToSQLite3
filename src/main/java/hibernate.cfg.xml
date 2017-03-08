@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database connection settings -->
+
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:D:\Users\okuda\NetBeans\NetBeansProjects\HibernateToSQLite3\src\main\resources\sqlite3\PojoUntil2005.db</property>
+        <property name="hibernate.connection.username"></property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</property>        
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+        
+        <property name="hibernate.connection.charSet">UTF-8</property>
+      
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">5</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+        <!--
+                <property name="hibernate.jdbc.batch_size">100</property>
+        -->
+        <mapping class="csvToSQLite3.PojoUntil2005"/>
+
+        <mapping resource="csvToSQLite3/hibernate.hbm.xml" />
+
+    </session-factory>
+</hibernate-configuration>

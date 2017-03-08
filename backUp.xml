@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <table name="kabu_until_2005">
+    <column>id</column>
+    <column>marketDate</column>
+    <column>code</column>
+    <column>name</column>
+    <column>marketOpen</column>
+    <column>high</column>
+    <column>low</column>
+    <column>marketClose</column>
+    <column>volume</column>
+    <column>market</column>
+  </table>
+</dataset>
